@@ -1,0 +1,93 @@
+html{
+  font-size: 134px;
+}
+
+.dashboard-title{
+  height: 0.7rem;
+  line-height: .7rem;
+  background: #30303B;
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: .19rem;
+}
+.dashboard-title .dashboard-title-clock{
+  cursor: pointer;
+  border-radius: 0.27rem;
+  display: inline-block;
+  text-align: center;
+  height: 0.37rem;
+  line-height: .37rem;
+  padding: 0 0.14rem;
+  font-size: .19rem;
+  background: #101015;
+  color: #fff;
+  margin-right: 0.1rem;
+}
+.dashboard-title .dashboard-title-clock .current-date{
+  cursor: pointer;
+  border-radius: 0.27rem;
+  display: inline-block;
+  text-align: center;
+  height: 0.37rem;
+  line-height: .37rem;
+  padding: 0 0.14rem;
+  font-size: .19rem;
+  background: #101015;
+  color: #fff;
+  margin-right: 0.1rem;
+}
+.traingle {
+
+  isplay: inline-block;
+  width: 0.05rem;
+  height: 0.05rem;
+  background: #101015;
+  -webkit-transform: scaleY(-1) rotate(45deg);
+  transform: scaleY(-1) rotate(45deg);
+  border-top: 0.01rem solid #fff;
+  border-left: 0.01rem solid #fff;
+  vertical-align: middle;
+  margin-left: 0.08rem;
+  margin-top: -0.03rem;
+}
+
+.dashboard-title .dashboard-nav{
+  cursor: pointer;
+  font-size: .2rem;
+  background-color: #000;
+  border-radius: 1rem;
+  display: inline-block;
+  height: 0.53rem;
+  line-height: .53rem;
+  padding: 0 0.05rem;
+  vertical-align: middle;
+  text-align: center;
+  margin-left: .7rem;
+}
+.dashboard-title .dashboard-nav span{
+  color: aliceblue;
+  display: inline-block;
+  border-radius: 0.24rem;
+  height: 0.46rem;
+  width: 1.3rem;
+  line-height: .46rem;
+}
+.dashboard-title .dashboard-title-group{
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0.16rem;
+  font-size: .2rem;
+}
+.dashboard-title .dashboard-title-group .dashboard-title-togglefullscreen{
+  border: 0.01rem solid rgba(255,255,255,0.20);
+    border-radius: 0.2rem;
+    height: 0.4rem;
+    line-height: .4rem;
+    padding: 0 0.23rem;
+    margin-top: 0.15rem;
+    cursor: pointer;
+    background: rgba(255,255,255,0.10);
+
+}
