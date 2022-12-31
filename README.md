@@ -1,3 +1,1 @@
-# User-interface
-c端
-https://piaofang.maoyan.com/dashboard c端参考
+# 管理端
