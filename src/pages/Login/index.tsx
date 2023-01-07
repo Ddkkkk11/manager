@@ -2,19 +2,42 @@ import React from 'react'
 import { Button, Form, Input, Card, message } from 'antd';
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import logoImg from '../../assets/logo.svg'
-import fetchLogin from '../../request/store';
-import './style.css'
+import { fetchLogin } from '../../request/api';
+import {useNavigate} from "react-router-dom";
+import SetLocal from "../../utils";
+import './style.less'
 export default function Login() {
+  const navigate = useNavigate();
   const onFinish = (values: any) => {
-    console.log('Success:', values);
     const params = values;
     fetchLogin(params).then( res => {
       console.log('res', res);
-      if(res.err) {
+      if (res.errCode) {
+        message.error(res.message);
+        return;
+      };
+        //存储数据
+      const data = res.data;
+      SetLocal({
+        avatar: data.avatar,
+        "cms-token": data["cms-token"],
+        editable: data.editable,
+        player: data.player,
+        username: data.username
+      });
+      setTimeout(() => {
+        navigate('/');
+        message.success("Login Success!");
+      }, 1500);
+      // localStorage.setItem('avatar', data.avatar);
+      // localStorage.setItem('cms-token', data["cms-token"]);
+      // localStorage.setItem('editable', data.editable);
+      // localStorage.setItem('player', data.player);
+      /*if(res.err) {
         message.error('Login failure !');
         return;
       }
-      message.success('Login Success !')
+      message.success('Login Success !')*/
     })
   };
 
@@ -66,6 +89,5 @@ export default function Login() {
 
       </div>
     </>
-
   )
 }

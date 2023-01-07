@@ -3,7 +3,8 @@ import axios from "axios";
 //创建axios实例
 const basicService = axios.create({
   //基本路径的抽取
-  baseURL: 'http://localhost:3001',
+  // baseURL: 'http://localhost:3001',
+  baseURL: '/api',
   timeout: 20000
 });
 
