@@ -18,10 +18,10 @@ export default function App() {
         <>
             <Layout id='app'>
                 <Layout className='nav_sider'>
-                    <Sider trigger={null} collapsible collapsed={collapsed}>
-                        <h1 style={{ color: '#FFF', textAlign: 'center'}}>Dashboard</h1>
+                    <Sider trigger={null} collapsible collapsed={collapsed} theme='light'>
+                        <h1 style={{ color: '#333', textAlign: 'center'}}>Dashboard</h1>
                         <Menu
-                            theme="dark"
+                            theme="light"
                             mode="inline"
                             defaultSelectedKeys={['1']}
                             className='nav_menu'
@@ -44,6 +44,11 @@ export default function App() {
                             ]}
                         />
                     </Sider>
+                </Layout>
+                <Layout>
+                    <Content>
+                        123123213
+                    </Content>
                 </Layout>
                 <footer>
                     &copy;2023 By 小薛
