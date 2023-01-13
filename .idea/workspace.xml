@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4cb3d7e-701f-44d4-b549-2632379f6924" name="变更" comment="导航栏">
+    <list default="true" id="b4cb3d7e-701f-44d4-b549-2632379f6924" name="变更" comment="修改">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +73,7 @@
       <workItem from="1672501426220" duration="3780000" />
       <workItem from="1673093750729" duration="2228000" />
       <workItem from="1673096874581" duration="10823000" />
-      <workItem from="1673174834438" duration="6822000" />
+      <workItem from="1673174834438" duration="7221000" />
     </task>
     <task id="LOCAL-00001" summary="导航栏">
       <created>1673180673537</created>
@@ -84,7 +82,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673180673537</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="修改">
+      <created>1673182096493</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1673182096493</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,6 +97,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="导航栏" />
-    <option name="LAST_COMMIT_MESSAGE" value="导航栏" />
+    <MESSAGE value="修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改" />
   </component>
 </project>
