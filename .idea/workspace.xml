@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4cb3d7e-701f-44d4-b549-2632379f6924" name="变更" comment="side修改">
-      <change afterPath="$PROJECT_DIR$/mock/base.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/menu/index.tsx" afterDir="false" />
+    <list default="true" id="b4cb3d7e-701f-44d4-b549-2632379f6924" name="变更" comment="mock">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/webpackDevServer.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpackDevServer.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mock/base.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/base.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/base.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/request/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/request/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/request/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/request/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +84,7 @@
       <workItem from="1674554536724" duration="142000" />
       <workItem from="1674572334105" duration="5802000" />
       <workItem from="1674578377461" duration="32000" />
+      <workItem from="1674580650941" duration="2023000" />
     </task>
     <task id="LOCAL-00001" summary="导航栏">
       <created>1673180673537</created>
@@ -116,6 +110,7 @@
     <MESSAGE value="导航栏" />
     <MESSAGE value="修改" />
     <MESSAGE value="side修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="side修改" />
+    <MESSAGE value="mock" />
+    <option name="LAST_COMMIT_MESSAGE" value="mock" />
   </component>
 </project>
