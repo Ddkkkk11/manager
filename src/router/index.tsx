@@ -7,6 +7,11 @@ import Register from "../pages/Register";
 import Home from "../pages/Home";
 // APP > List
 //Login
+
+//面包屑
+const breadcrumbNameMap: Record<string, string> = {
+
+}
 export default function BaseRouter () {
     return (
         <Router>

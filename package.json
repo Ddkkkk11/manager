@@ -40,6 +40,7 @@
     "jest-resolve": "^27.4.2",
     "jest-watch-typeahead": "^1.0.0",
     "mini-css-extract-plugin": "^2.4.5",
+    "mock-utils": "^0.0.16",
     "nprogress": "^0.2.0",
     "postcss": "^8.4.4",
     "postcss-flexbugs-fixes": "^5.0.2",
@@ -69,7 +70,7 @@
     "workbox-webpack-plugin": "^6.4.1"
   },
   "scripts": {
-    "start": "node scripts/start.js --open",
+    "start": "node scripts/start.js --open --env.mock",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js"
   },

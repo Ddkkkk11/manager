@@ -4,11 +4,14 @@ interface IFetchLogin {
   password: string
 }
 //注册
-export function fetchRegister (params: IFetchLogin): Promise<any> {
+export const fetchRegister = (params: IFetchLogin): Promise<any> => {
   return basicService.post('register', params);
 
 }
 //登录
-export function fetchLogin (params: IFetchLogin): Promise<any> {
+export const fetchLogin = (params: IFetchLogin): Promise<any> => {
   return basicService.post('login', params);
+}
+export const fetchMenu = (): Promise<any> => {
+  return basicService.get('menu')
 }
