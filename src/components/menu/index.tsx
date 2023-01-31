@@ -48,7 +48,6 @@ export default function AdminMenu() {
     }, [])
     return (
         <Sider trigger={null} collapsible collapsed={collapsed} theme='light'>
-            <h1 style={{color: '#333', textAlign: 'center'}}>Dashboard</h1>
             <Menu
                 theme="light"
                 mode="inline"
@@ -56,8 +55,6 @@ export default function AdminMenu() {
                 className='nav_menu'
                 items={items}
             >
-
-
             </Menu>
         </Sider>
     )
