@@ -1,7 +1,7 @@
-import {HomeOutlined, ExperimentOutlined, GlobalOutlined, CrownOutlined} from "@ant-design/icons";
-import {theme, Layout, Menu, MenuProps} from "antd";
-import React, {useEffect, useState} from "react";
-import {fetchMenu} from "../../request/api";
+import { HomeOutlined, ExperimentOutlined, GlobalOutlined, CrownOutlined } from "@ant-design/icons";
+import { Layout, Menu, MenuProps } from "antd";
+import React, { useEffect, useState } from "react";
+import { fetchMenu } from "../../request/api";
 const { Sider } = Layout;
 type MenuItem = Required<MenuProps>['items'][number];
 const ROUTE_ICON_MAP = {
