@@ -4,9 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4cb3d7e-701f-44d4-b549-2632379f6924" name="变更" comment="mock">
+    <list default="true" id="b4cb3d7e-701f-44d4-b549-2632379f6924" name="变更" comment="menu完成">
+      <change afterPath="$PROJECT_DIR$/src/components/menu/1.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/typing/type.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/webpackDevServer.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpackDevServer.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/base.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/base.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/menu/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/request/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/request/api.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/router/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +31,8 @@
         <option value="CSS File" />
         <option value="TypeScript File" />
         <option value="Less File" />
-        <option value="TypeScript JSX File" />
         <option value="JavaScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -45,7 +56,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/桌面/project/manager/src/pages/Register",
+    "last_opened_file_path": "D:/桌面/project/manager/src/components/menu",
     "list.type.of.created.stylesheet": "Less",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
@@ -54,13 +65,14 @@
     "node.js.selected.package.standard": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui",
+    "settings.editor.selected.configurable": "preferences.customizations",
     "ts.external.directory.path": "D:\\桌面\\project\\manager\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\桌面\project\manager\src\components\menu" />
       <recent name="D:\桌面\project\manager\src\pages\Register" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -84,7 +96,8 @@
       <workItem from="1674572334105" duration="5802000" />
       <workItem from="1674578377461" duration="32000" />
       <workItem from="1674580650941" duration="2023000" />
-      <workItem from="1675440302814" duration="2724000" />
+      <workItem from="1675440302814" duration="3030000" />
+      <workItem from="1675487929791" duration="5159000" />
     </task>
     <task id="LOCAL-00001" summary="导航栏">
       <created>1673180673537</created>
@@ -100,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673182096493</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="设置目标">
+      <created>1675443325504</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1675443325504</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,6 +131,8 @@
     <MESSAGE value="修改" />
     <MESSAGE value="side修改" />
     <MESSAGE value="mock" />
-    <option name="LAST_COMMIT_MESSAGE" value="mock" />
+    <MESSAGE value="设置目标" />
+    <MESSAGE value="menu完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="menu完成" />
   </component>
 </project>

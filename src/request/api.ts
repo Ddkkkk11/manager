@@ -13,5 +13,5 @@ export const fetchLogin = (params: IFetchLogin): Promise<any> => {
   return basicService.post('login', params);
 }
 export const fetchMenu = (): Promise<any> => {
-  return basicService.get('menu')
+  return basicService.get('/menu')
 }

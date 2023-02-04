@@ -104,7 +104,7 @@ module.exports = function (proxy, allowedHost) {
     proxy: {
       '/api': {
         // target: 'http://47.93.114.103:6688/manage',//后台服务地址以及端口号
-        target: 'http://localhost:3000/',//后台服务地址以及端口号
+        target: 'http://localhost:4000/',//后台服务地址以及端口号
         changeOrigin: true, //是否跨域
         pathRewrite: {'/api': '/'} //TODO APi相关
       }

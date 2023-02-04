@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import AdminMenu from "./components/menu";
 import { Layout } from 'antd';
 import './assets/base.less'
+import {Link} from "react-router-dom";
 
 const {Header, Sider, Content, Footer} = Layout;
 export default function App() {
@@ -11,7 +12,7 @@ export default function App() {
                 <Layout className='nav_side'>
                     <AdminMenu/>
                     <Content>
-                        Content
+                        <Link to={'/login'}></Link>
                     </Content>
                 </Layout>
                 <footer>

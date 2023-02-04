@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import 'antd/dist/reset.css';
+// import 'antd/dist/reset.css';
 import Router from './router';
 
 const root = ReactDOM.createRoot(

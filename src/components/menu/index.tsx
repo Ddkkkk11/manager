@@ -1,61 +1,50 @@
-import { HomeOutlined, ExperimentOutlined, GlobalOutlined, CrownOutlined } from "@ant-design/icons";
-import { Layout, Menu, MenuProps } from "antd";
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from 'react';
+import { Menu } from 'antd';
 import { fetchMenu } from "../../request/api";
-const { Sider } = Layout;
-type MenuItem = Required<MenuProps>['items'][number];
-const ROUTE_ICON_MAP = {
+import { HomeOutlined, ExperimentOutlined, GlobalOutlined, CrownOutlined } from '@ant-design/icons';
+import { MenuI } from "../../../typing/type";
+const ROUTE_ICON_MAP: any = {
     'HomeOutlined': <HomeOutlined/>,
     'ExperimentOutlined': <ExperimentOutlined/>,
     'GlobalOutlined': <GlobalOutlined/>,
     'CrownOutlined': <CrownOutlined/>,
 }
-function getItem(
-    label: React.ReactNode,
-    key: React.Key,
-    icon?: React.ReactNode,
-    children?: MenuItem[],
-    type?: 'group',
-): MenuItem {
-    return {
-        key,
-        icon,
-        children,
-        label,
-        type,
-    } as MenuItem;
+const getIcon = (icon: string) => {
+    const IconEl = ROUTE_ICON_MAP[icon];
+    if (!IconEl) {
+        return <></>;
+    }
+    return IconEl;
 }
-const items: MenuProps['items'] = [
-    getItem('Dashboard', 'sub1', <HomeOutlined />),
-    getItem('Test1', 'sub2', <ExperimentOutlined />, [
-        getItem('Option 5', '5'),
-        getItem('Option 6', '6'),
-    ]),
-    getItem('Test2', 'sub4', <GlobalOutlined />, [
-        getItem('Option 9', '9'),
-        getItem('Option 10', '10'),
-        getItem('Option 11', '11'),
-        getItem('Option 12', '12'),
-    ]),
-
-]
 export default function AdminMenu() {
-    const [collapsed, setCollapsed] = useState(false);
-    useEffect( () => {
-        fetchMenu().then( res => {
-            console.log('res', res.data)
+    const [menuList, setMenuList] = useState<MenuI[]>([]);
+    useEffect(() => {
+        if (!menuList.length) {
+            fetchMenu().then(res => {
+                setMenuList(res.data);
+            });
+        }
+    }, []);
+    if (!menuList.length) {
+        return null;
+    }
+    const renderMenu = (list: MenuI[])=> {
+        return list.map((item: MenuI) => {
+            if (item.children) {
+                return (
+                    <Menu.SubMenu icon={getIcon(item.icon as string)} title={item.name} key={item.id}>
+                        { renderMenu(item.children) }
+                    </Menu.SubMenu>
+                )
+            }
+            return <Menu.Item icon={getIcon(item.icon as string)} key={item.id}><a href={item.route}>{item.name}</a></Menu.Item>;
         })
-    }, [])
+    }
     return (
-        <Sider trigger={null} collapsible collapsed={collapsed} theme='light'>
-            <Menu
-                theme="light"
-                mode="inline"
-                defaultSelectedKeys={['1']}
-                className='nav_menu'
-                items={items}
-            >
-            </Menu>
-        </Sider>
-    )
+        <Menu
+            style={{ height: '100%',width: '10%', background: 'transparent' }}
+            mode="inline">
+            { renderMenu(menuList) }
+        </Menu>
+    );
 }
