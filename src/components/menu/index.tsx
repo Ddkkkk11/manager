@@ -42,7 +42,7 @@ export default function AdminMenu() {
     }
     return (
         <Menu
-            style={{ height: '100%',width: '10%', background: 'transparent' }}
+            style={{ height: '100%', background: 'transparent' }}
             mode="inline">
             { renderMenu(menuList) }
         </Menu>

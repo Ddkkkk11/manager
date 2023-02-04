@@ -1,0 +1,38 @@
+@import '~antd/dist/antd.css';
+.layout {
+  display: flex;
+  height: 100vh;
+  .layout-menu {
+    width: 10%;
+    height: calc(100% - 70px);
+    background: #F7F9FE;
+    .menu {
+      ul{
+        border-right-color: #F7F9FE;
+      }
+    }
+  }
+  .layout-content {
+    width: 90%;
+    border-radius: 12px;
+    padding: 0 24px 24px 0;
+    .content{
+      width: 100%;
+      overflow: auto;
+      background-color: #fff;
+      border-radius: 12px;
+    }
+  }
+
+  footer {
+    height: 70px;
+    width: 100%;
+    position: absolute;
+    top: calc( 100% - 70px );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F7F9FE;
+    color: #333333;
+  }
+}

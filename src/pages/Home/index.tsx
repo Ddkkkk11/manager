@@ -1,8 +1,8 @@
 import React from "react";
-export function Demo () {
+export function Home () {
     return (
         <>
-            <h1>HelloWorld</h1>
+            <h1>GameList</h1>
         </>
     )
 }
