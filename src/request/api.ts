@@ -6,7 +6,6 @@ interface IFetchLogin {
 //注册
 export const fetchRegister = (params: IFetchLogin): Promise<any> => {
   return basicService.post('register', params);
-
 }
 //登录
 export const fetchLogin = (params: IFetchLogin): Promise<any> => {

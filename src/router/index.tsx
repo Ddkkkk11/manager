@@ -5,6 +5,7 @@ import { Home } from "../pages/Home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Dashboard from "../containers/dashboard";
+import Stream from "../containers/stream";
 // APP > List
 //Login
 
@@ -18,6 +19,7 @@ export default function BaseRouter () {
             <Routes>
                 <Route path='/' element={<App/>}>
                     <Route path='/dashboard' element={<Dashboard/>}></Route>
+                    <Route path='/download' element={<Stream/>}></Route>
                     <Route path='/developers/game' element={<Home/>}></Route>
                     <Route path='/developers/game/create' element={<Home/>}></Route>
                 </Route>

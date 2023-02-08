@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import AdminMenu from "./components/menu";
 import { Layout } from 'antd';
 import './style.less'
