@@ -4,6 +4,7 @@ import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import { fetchLogin } from '../../request/api';
 import {useNavigate} from "react-router-dom";
 import SetLocal from "../../utils";
+import computer  from '../../assets/images/computer.svg'
 import './style.less'
 export default function Login() {
   const navigate = useNavigate();
@@ -50,7 +51,7 @@ export default function Login() {
 
           <div className='container-left'>
             <div className='content-left'>
-              <img src="https://admin.kuizuo.cn/assets/login-box-bg.9027741f.svg" alt="" className='computed-img'/>
+              <img src={computer} alt="computer" className='computed-img'/>
               <div className='title'>
                 <h1>高校自习室管理系统</h1>
               </div>
