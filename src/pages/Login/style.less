@@ -1,34 +1,63 @@
-.login {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background: url("../../assets/images/login.jpg") center no-repeat;
-    background-size: 100% 100%;
-    .login_box_card {
-        width: 450px;
-        margin: 15% auto;
-        .box_card img {
-            width: 25px;
-            height: 25px;
-            animation: loading 3s linear infinite;
-        }
-        .box_card {
-            border-radius: 20px;
-            .ant-card-head-title {
-                font-size: 25px;
-                text-align: center;
+.login-box {
+    min-height: 100vh;
+
+    overflow: hidden;
+    .container {
+        max-width: 1600px;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        .container-left {
+            width: 50%;
+            height: 100vh;
+            .content-left {
+                height: 100vh;
+                padding-top: 15%;
+                position: absolute;
+                .computed-img {
+                    width: 40%;
+                    //margin-top: 45%;
+                }
+                .title {
+                    h1 {
+                        color: #FFFFFF;
+                    }
+                }
+                .introduce {
+                    h3 {
+                        color: #FFFFFF;
+                    }
+                }
             }
         }
+
+
+        .container-right {
+            width: 50%;
+            height: 100vh;
+            .content-right {
+                height: 100vh;
+                padding-top: 46%;
+                .container-right-form {
+                    width: 400px;
+                    margin-left: 200px;
+                }
+            }
+
+        }
     }
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin-left: -48%;
+        background-image: url(../../assets/images/login-bg.svg);
+        background-position: 100%;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        content: "";
+    }
+
 }
-@keyframes loading {
-    /*以百分比来规定改变发生的时间 也可以通过"from"和"to",等价于0% 和 100%*/
-    0% {
-        /*rotate(2D旋转) scale(放大或者缩小) translate(移动) skew(翻转)*/
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-/*# sourceMappingURL=./index.css.map */

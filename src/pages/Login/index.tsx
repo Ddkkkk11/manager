@@ -1,7 +1,6 @@
 import React from 'react'
 import { Button, Form, Input, Card, message } from 'antd';
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
-import logoImg from '../../assets/logo.svg'
 import { fetchLogin } from '../../request/api';
 import {useNavigate} from "react-router-dom";
 import SetLocal from "../../utils";
@@ -46,48 +45,74 @@ export default function Login() {
   };
   return (
     <>
-      <div className="login">
-        <div className='login_box_card'>
-          <Card className='box_card' title='高校自习室管理系统' hoverable bordered>
-            <Form
-              name="basic"
-              onFinish={onFinish}
-              onFinishFailed={onFinishFailed}
-              autoComplete="off"
-            >
-              <Form.Item
-                name="username"
-                rules={[{ required: true, message: 'Please input your username!' }]}
-              >
-                <Input
-                  size='large'
-                  placeholder='Please input your username!'
-                  prefix={<UserOutlined />}
-                />
-              </Form.Item>
+      <div className='login-box'>
+        <div className='container'>
 
-              <Form.Item
-                name="password"
-                rules={[{ required: true, message: 'Please input your password!' }]}
-              >
-                <Input.Password
-                  size='large'
-                  placeholder='Please input your password!'
-                  prefix={<LockOutlined />}
-                />
-              </Form.Item>
+          <div className='container-left'>
+            <div className='content-left'>
+              <img src="https://admin.kuizuo.cn/assets/login-box-bg.9027741f.svg" alt="" className='computed-img'/>
+              <div className='title'>
+                <h1>高校自习室管理系统</h1>
+              </div>
+              <div className='introduce'>
+                <h3>输入您的个人详细信息开始使用！</h3>
+              </div>
+            </div>
 
-              <Form.Item>
-                <Button size='large' type="primary" htmlType="submit" block>
-                  Login
-                  <img src={logoImg} alt="" />
-                </Button>
-              </Form.Item>
-            </Form>
-          </Card>
+          </div>
+
+          <div className='container-right'>
+            <div className='content-right'>
+              <div className='container-right-form'>
+                <h1>登录</h1>
+                <Form
+                    name="basic"
+                    onFinish={onFinish}
+                    onFinishFailed={onFinishFailed}
+                    initialValues={{
+                      username: 'admin',
+                      password: '123456'
+                    }}
+                    autoComplete="off"
+                >
+                  <Form.Item
+                      name="username"
+                      rules={[{ required: true, message: 'Please input your username!' }]}
+                  >
+                    <Input
+                        size='large'
+                        placeholder='Please input your username!'
+                        prefix={<UserOutlined />}
+                    />
+                  </Form.Item>
+
+                  <Form.Item
+                      name="password"
+                      rules={[{ required: true, message: 'Please input your password!' }]}
+                  >
+                    <Input.Password
+                        size='large'
+                        placeholder='Please input your password!'
+                        prefix={<LockOutlined />}
+                    />
+                  </Form.Item>
+
+                  <Form.Item>
+                    <Button size='large' type="primary" htmlType="submit" block style={{ marginTop: 10, background: '#2348AF', borderColor: '#2348AF' }}>
+                      Login
+                    </Button>
+                  </Form.Item>
+                </Form>
+              </div>
+            </div>
+          </div>
+
+
         </div>
 
+
       </div>
+
     </>
   )
 }
