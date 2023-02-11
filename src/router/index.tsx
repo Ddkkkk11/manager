@@ -17,13 +17,11 @@ export default function BaseRouter () {
     return (
         <Router>
             <Routes>
-                <Route path='/' element={<App/>}>
-                    <Route path='/dashboard' element={<Dashboard/>}></Route>
-                    <Route path='/download' element={<Stream/>}></Route>
-                    <Route path='/developers/game' element={<Home/>}></Route>
-                    <Route path='/developers/game/create' element={<Home/>}></Route>
+                <Route path='/' element={<Login/>}></Route>
+                <Route path='/home' element={<App/>}>
+                    <Route path='/home/dashboard' element={<Dashboard/>}></Route>
+                    <Route path='/home/demo1/child1' element={<Home/>}></Route>
                 </Route>
-                <Route path='/login' element={<Login/>}></Route>
                 <Route path='/register' element={<Register/>}></Route>
             </Routes>
         </Router>
