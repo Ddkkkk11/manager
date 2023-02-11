@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import AdminMenu from "./components/menu";
-import { Layout } from 'antd';
+import { Button, Layout } from 'antd';
+import { Outlet, useNavigate } from "react-router-dom";
 import './style.less'
-import { Outlet } from "react-router-dom";
-
-const {Header, Sider, Content, Footer} = Layout;
+const { Header } = Layout;
 export default function App() {
+    const navigate = useNavigate();
     return (
         <>
             <div className='layout'>
@@ -25,6 +25,7 @@ export default function App() {
                     <a href="https://beian.miit.gov.cn/" style={{color: "#333"}}>&copy;2023 By 小薛
                         备案信息：陕ICP备2022014014号</a>
                 </footer>
+                <Button type='primary' onClick={() => navigate('/') }>退出</Button>
             </div>
         </>
     );
