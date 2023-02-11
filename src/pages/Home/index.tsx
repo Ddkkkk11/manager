@@ -2,7 +2,7 @@ import React from "react";
 export function Home () {
     return (
         <>
-            <h1>GameList</h1>
+            <h1>Children1</h1>
         </>
     )
 }
