@@ -12,23 +12,23 @@ export default function Login() {
     const params = values;
     fetchLogin(params).then( res => {
       console.log('res', res);
-      if (res.errCode) {
-        message.error(res.message);
+      if (res.error) {
+        message.error(res.error);
         return;
       };
         //存储数据
-      const data = res.data;
-      SetLocal({
-        avatar: data.avatar,
-        "cms-token": data["cms-token"],
-        editable: data.editable,
-        player: data.player,
-        username: data.username
-      });
+      // const data = res.data;
+      // SetLocal({
+      //   avatar: data.avatar,
+      //   "cms-token": data["cms-token"],
+      //   editable: data.editable,
+      //   player: data.player,
+      //   username: data.username
+      // });
       setTimeout(() => {
-        navigate('/');
-        message.success("Login Success!");
-      }, 1500);
+        navigate('/home');
+        message.success(res.message);
+      }, 500);
       // localStorage.setItem('avatar', data.avatar);
       // localStorage.setItem('cms-token', data["cms-token"]);
       // localStorage.setItem('editable', data.editable);
