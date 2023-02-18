@@ -1,24 +1,26 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Button, Form, Input, Card, message } from 'antd';
+import { Button, Card, Form, Input, message } from 'antd';
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
-import  { fetchRegister } from '../../request/api';
+import { fetchRegister } from '../../request/api';
 import logoImg from '../../assets/logo.svg'
 import './style.less'
+
 export default function Register() {
     const navigate = useNavigate();
     const onFinish = (values: any) => {
         const params = values;
-        fetchRegister(params).then( res => {
+        fetchRegister(params).then(res => {
             console.log('res', res);
-           /* if(res.err) {
-                message.error('Register failure !');
-                return;
-            }*/
+            /* if(res.err) {
+                 message.error('Register failure !');
+                 return;
+             }*/
             if (res.errCode) {
                 message.error(res.message)
                 return;
-            };
+            }
+            ;
             message.success("Register Success!");
             //跳转到登录页面
             setTimeout(() => {
@@ -48,7 +50,7 @@ export default function Register() {
                                 <Input
                                     size='large'
                                     placeholder='Please input your username!'
-                                    prefix={<UserOutlined />}
+                                    prefix={<UserOutlined/>}
                                 />
                             </Form.Item>
 
@@ -59,14 +61,14 @@ export default function Register() {
                                 <Input.Password
                                     size='large'
                                     placeholder='Please input your password!'
-                                    prefix={<LockOutlined />}
+                                    prefix={<LockOutlined/>}
                                 />
                             </Form.Item>
 
                             <Form.Item>
                                 <Button size='large' type="primary" htmlType="submit" block>
                                     Register
-                                    <img src={logoImg} alt="" />
+                                    <img src={logoImg} alt=""/>
                                 </Button>
                             </Form.Item>
                         </Form>

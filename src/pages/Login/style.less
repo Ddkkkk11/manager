@@ -1,64 +1,73 @@
 .login-box {
-    min-height: 100vh;
+  min-height: 100vh;
 
-    overflow: hidden;
-    .container {
-        max-width: 1600px;
-        height: 100%;
-        margin: auto;
-        display: flex;
-        .container-left {
-            width: 50%;
-            height: 100vh;
-            .content-left {
-                height: 100vh;
-                padding-top: 18%;
-                position: absolute;
-                .computed-img {
-                    width: 40%;
-                    //margin-top: 45%;
-                }
-                .title {
-                    h1 {
-                        color: #FFFFFF;
-                    }
-                }
-                .introduce {
-                    h3 {
-                        color: #FFFFFF;
-                    }
-                }
-            }
-        }
+  overflow: hidden;
 
+  .container {
+    max-width: 1600px;
+    height: 100%;
+    margin: auto;
+    display: flex;
 
-        .container-right {
-            width: 50%;
-            height: 100vh;
-            .content-right {
-                height: 100vh;
-                padding-top: 18%;
-                position: absolute;
-                .container-right-form {
-                    width: 400px;
-                    margin-left: 200px;
-                }
-            }
+    .container-left {
+      width: 50%;
+      height: 100vh;
 
-        }
-    }
-    &::before {
+      .content-left {
+        height: 100vh;
+        padding-top: 18%;
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        margin-left: -48%;
-        background-image: url(../../assets/images/login-bg.svg);
-        background-position: 100%;
-        background-repeat: no-repeat;
-        background-size: auto 100%;
-        content: "";
+
+        .computed-img {
+          width: 40%;
+          //margin-top: 45%;
+        }
+
+        .title {
+          h1 {
+            color: #FFFFFF;
+          }
+        }
+
+        .introduce {
+          h3 {
+            color: #FFFFFF;
+          }
+        }
+      }
     }
+
+
+    .container-right {
+      width: 50%;
+      height: 100vh;
+
+      .content-right {
+        height: 100vh;
+        padding-top: 18%;
+        position: absolute;
+
+        .container-right-form {
+          width: 400px;
+          margin-left: 200px;
+        }
+      }
+
+    }
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-left: -48%;
+    background-image: url(../../assets/images/login-bg.svg);
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    content: "";
+  }
 
 }

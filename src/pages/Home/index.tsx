@@ -1,5 +1,6 @@
 import React from "react";
-export function Home () {
+
+export function Home() {
     return (
         <>
             <h1>Children1</h1>

@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4cb3d7e-701f-44d4-b549-2632379f6924" name="变更" comment="menu完成">
-      <change afterPath="$PROJECT_DIR$/src/containers/dashboard/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/style.less" afterDir="false" />
+    <list default="true" id="b4cb3d7e-701f-44d4-b549-2632379f6924" name="变更" comment="删除无用文件">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/base.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/base.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Login/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Login/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,26 +38,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/桌面/project/manager/src/components/menu&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;Less&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.customizations&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\桌面\\project\\manager\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/桌面/project/manager/src/components/menu",
+    "list.type.of.created.stylesheet": "Less",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.配色方案字体",
+    "ts.external.directory.path": "D:\\桌面\\project\\manager\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\桌面\project\manager\src\components\menu" />
@@ -93,6 +87,7 @@
       <workItem from="1675440302814" duration="3030000" />
       <workItem from="1675487929791" duration="5444000" />
       <workItem from="1675501435043" duration="7605000" />
+      <workItem from="1676713312551" duration="268000" />
     </task>
     <task id="LOCAL-00001" summary="导航栏">
       <created>1673180673537</created>
@@ -115,7 +110,49 @@
       <option name="project" value="LOCAL" />
       <updated>1675443325504</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="增加推出按钮">
+      <created>1676135576852</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1676135576852</updated>
+    </task>
+    <task id="LOCAL-00005" summary="更换h1内容">
+      <created>1676135596222</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1676135596222</updated>
+    </task>
+    <task id="LOCAL-00006" summary="修改重定向">
+      <created>1676135617595</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1676135617595</updated>
+    </task>
+    <task id="LOCAL-00007" summary="修改路由">
+      <created>1676135633404</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1676135633404</updated>
+    </task>
+    <task id="LOCAL-00008" summary="登录页样式修改">
+      <created>1676135654748</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1676135654748</updated>
+    </task>
+    <task id="LOCAL-00009" summary="删除无用文件">
+      <created>1676135673164</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1676135673164</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,6 +165,12 @@
     <MESSAGE value="mock" />
     <MESSAGE value="设置目标" />
     <MESSAGE value="menu完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="menu完成" />
+    <MESSAGE value="增加推出按钮" />
+    <MESSAGE value="更换h1内容" />
+    <MESSAGE value="修改重定向" />
+    <MESSAGE value="修改路由" />
+    <MESSAGE value="登录页样式修改" />
+    <MESSAGE value="删除无用文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="删除无用文件" />
   </component>
 </project>

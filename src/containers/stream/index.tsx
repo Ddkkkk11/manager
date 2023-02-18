@@ -1,7 +1,8 @@
 import React from "react";
 import { Button } from "antd";
-export default function Stream () {
-    const onFetch =  async (url: string) => {
+
+export default function Stream() {
+    const onFetch = async (url: string) => {
         const res = await fetch(url).then(res => res.arrayBuffer());
         const blog = new Blob([res]);
         const toUrl = URL.createObjectURL(blog);
@@ -16,7 +17,7 @@ export default function Stream () {
     }
     return (
         <>
-            <Button onClick={() => downLoad()} type='primary' >
+            <Button onClick={() => downLoad()} type='primary'>
                 DownLoad
             </Button>
         </>
