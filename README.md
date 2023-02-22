@@ -6,7 +6,7 @@
 
 
 ##  管理端文件目录
-
+```markdown
 ├── README.md
 ├── build
 │   ├── asset-manifest.json
@@ -76,3 +76,5 @@
 └── typing
     └── type.ts //Ts 类型
 
+
+```
