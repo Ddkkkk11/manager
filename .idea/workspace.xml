@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4cb3d7e-701f-44d4-b549-2632379f6924" name="变更" comment="删除无用文件">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Login/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Login/index.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="b4cb3d7e-701f-44d4-b549-2632379f6924" name="变更" comment="格式化代码" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,7 +84,7 @@
       <workItem from="1675440302814" duration="3030000" />
       <workItem from="1675487929791" duration="5444000" />
       <workItem from="1675501435043" duration="7605000" />
-      <workItem from="1676713312551" duration="268000" />
+      <workItem from="1676713312551" duration="534000" />
     </task>
     <task id="LOCAL-00001" summary="导航栏">
       <created>1673180673537</created>
@@ -152,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676135673164</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="格式化代码">
+      <created>1676713713275</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1676713713275</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,6 +175,7 @@
     <MESSAGE value="修改路由" />
     <MESSAGE value="登录页样式修改" />
     <MESSAGE value="删除无用文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="删除无用文件" />
+    <MESSAGE value="格式化代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="格式化代码" />
   </component>
 </project>
