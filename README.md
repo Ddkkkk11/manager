@@ -5,7 +5,8 @@
 
 
 
-# # manager项目路径
+##  管理端文件目录
+
 ├── README.md
 ├── build
 │   ├── asset-manifest.json
