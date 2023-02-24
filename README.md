@@ -65,13 +65,13 @@
 │   ├── reportWebVitals.ts
 │   ├── request
 │   │   ├── api.ts //调用接口文件
-│   │   └── index.ts //封装axios
+│   │   └── index.tsx //封装axios
 │   ├── router 
 │   │   └── index.tsx //路由
 │   ├── setupTests.ts
 │   ├── style.less
 │   └── utils
-│       └── index.ts //一些工具
+│       └── index.tsx //一些工具
 ├── tsconfig.json
 └── typing
     └── type.ts //Ts 类型

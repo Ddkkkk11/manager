@@ -27,7 +27,7 @@ export default function Login() {
             //   username: data.username
             // });
             setTimeout(() => {
-                navigate('/home');
+                navigate('/home/dashboard');
                 message.success(res.message);
             }, 500);
             // localStorage.setItem('avatar', data.avatar);

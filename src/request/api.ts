@@ -16,3 +16,7 @@ export const fetchLogin = (params: IFetchLogin): Promise<any> => {
 export const fetchMenu = (): Promise<any> => {
     return basicService.get('/menu')
 }
+//获取学生数据
+export const fetchStudent = (): Promise<any> => {
+    return basicService.get("user");
+}

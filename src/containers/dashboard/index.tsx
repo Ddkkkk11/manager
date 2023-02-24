@@ -1,9 +1,6 @@
 import React from "react";
-
-export default function Dashboard() {
+export default function Dashboard(props: any) {
     return (
-        <>
-            <h1>我是dashboard</h1>
-        </>
+        <h1>heeee</h1>
     )
 }
