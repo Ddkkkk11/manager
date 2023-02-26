@@ -9,7 +9,7 @@ $gridManager.defaultOption = {
     height: '100%',
     i18n: 'en-us',
     supportRemind: false,
-    supportAjaxPage: true,
+    supportAjaxPage: false,
     disableCache: false,
     useCellFocus: true,
     sortDownText: '-1',

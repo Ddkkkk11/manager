@@ -3,13 +3,12 @@ import Table from '../../components/Table'
 import { fetchStudent } from "../../request/api";
 import './style.less'
 
+const gridManagerName = "home-table";
+
 export function Students() {
-    const gridManagerName = "home-table";
     const option = {
         gridManagerName,
-        ajaxData: () => {
-            return fetchStudent()
-        },
+        ajaxData: () => fetchStudent(),
         columnData: [
             {
                 key: "student_id",
