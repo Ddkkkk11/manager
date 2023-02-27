@@ -22,7 +22,7 @@ export default function MyBreadcrumb() {
     return (
         <>
             <div className="breadcrumb-box">
-                <Breadcrumb>{breadcrumbItems}</Breadcrumb>
+                <Breadcrumb>{breadcrumbItems.splice(1, breadcrumbItems.length)}</Breadcrumb>
             </div>
         </>
     )

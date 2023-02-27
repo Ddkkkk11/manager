@@ -3,6 +3,7 @@ import AdminMenu from "./components/menu";
 import { Outlet } from "react-router-dom";
 import MyBreadcrumb from "./components/Breadcrumb";
 import './style.less'
+import User from './components/user';
 export default function App() {
     return (
         <>
@@ -10,6 +11,9 @@ export default function App() {
                 <div className='layout-menu'>
                     <div className="menu">
                         <AdminMenu/>
+                    </div>
+                    <div className="user">
+                        <User/>
                     </div>
                 </div>
                 <div className='layout-content'>
