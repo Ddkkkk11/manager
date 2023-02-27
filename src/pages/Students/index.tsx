@@ -3,7 +3,7 @@ import Table from '../../components/Table'
 import { fetchStudent } from "../../request/api";
 import './style.less'
 
-const gridManagerName = "home-table";
+const gridManagerName = "home-table-123asdasdasdasdasd";
 
 export function Students() {
     const option = {
@@ -12,11 +12,13 @@ export function Students() {
         columnData: [
             {
                 key: "student_id",
-                text: "学生ID"
+                text: "学生ID",
+                width: 200
             },
             {
                 key: "student_name",
-                text: "学生名称"
+                text: "学生名称",
+                width: 200
             },
             {
                 key: "create_time",

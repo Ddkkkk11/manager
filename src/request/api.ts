@@ -18,5 +18,5 @@ export const fetchMenu = (): Promise<any> => {
 }
 //获取学生数据
 export const fetchStudent = (): Promise<any> => {
-    return basicService.get("user");
+    return basicService.get("/user");
 }
