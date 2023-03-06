@@ -2,8 +2,8 @@ import React from 'react';
 import AdminMenu from "./components/menu";
 import { Outlet } from "react-router-dom";
 import MyBreadcrumb from "./components/Breadcrumb";
-import './style.less'
 import User from './components/user';
+import './style.less'
 export default function App() {
     return (
         <>

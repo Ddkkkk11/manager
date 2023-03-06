@@ -3,7 +3,7 @@ import { Button, Form, Input, message } from 'antd';
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import { fetchLogin } from '../../request/api';
 import { useNavigate } from "react-router-dom";
-import computer from '../../assets/images/computer.svg'
+import computer from '../../assets/images/computer.svg';
 import './style.less'
 
 export default function Login() {

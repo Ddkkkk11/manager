@@ -21,7 +21,7 @@ export default function User() {
     )
     return (
         <Dropdown overlay={menu} trigger={['click']}>
-            <Avatar size={36} src={<img src={url} alt="avatar"/>} style={{ cursor: 'pointer', fontSize: 12, color: '#fff', backgroundColor: '#4278FF' }}>
+            <Avatar size={24} src={<img src={url} alt="avatar"/>} style={{ cursor: 'pointer', fontSize: 12, color: '#fff', backgroundColor: '#4278FF' }}>
                 {/*{"a".toUpperCase()}*/}
             </Avatar>
         </Dropdown>
