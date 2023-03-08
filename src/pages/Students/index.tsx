@@ -5,7 +5,7 @@ import './style.less'
 
 const gridManagerName = "home-table-123asdasdasdasdasd";
 
-export function Students() {
+export default function Students() {
     const option = {
         gridManagerName,
         ajaxData: () => fetchStudent(),

@@ -8,7 +8,7 @@ export default function User() {
 
     const navigate = useNavigate();
     const onLogout = () => {
-        navigate('/');
+        navigate('/login');
         message.success("已经退出登录");
     }
 
