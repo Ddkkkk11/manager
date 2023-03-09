@@ -5,46 +5,24 @@ import { fetchLogin } from '../../request/api';
 import { useNavigate } from "react-router-dom";
 import computer from '../../assets/images/computer.svg';
 import './style.less'
+import { authSuccessHandler } from "../../utils";
 
 export default function Login() {
     const navigate = useNavigate();
     const onFinish = (values: any) => {
         const params = values;
         fetchLogin(params).then(res => {
-            console.log('res', res);
-            if (res.error) {
-                message.error(res.error);
-                return;
+            if (res.data.access_token) {
+                message.success({
+                    content: '登录成功',
+                    duration: 3
+                });
+                authSuccessHandler(res.data.access_token);
+                navigate("/dashboard");
             }
-            ;
-            //存储数据
-            // const data = res.data;
-            // SetLocal({
-            //   avatar: data.avatar,
-            //   "cms-token": data["cms-token"],
-            //   editable: data.editable,
-            //   player: data.player,
-            //   username: data.username
-            // });
-            setTimeout(() => {
-                navigate('/dashboard');
-                message.success(res.message);
-            }, 500);
-            // localStorage.setItem('avatar', data.avatar);
-            // localStorage.setItem('cms-token', data["cms-token"]);
-            // localStorage.setItem('editable', data.editable);
-            // localStorage.setItem('player', data.player);
-            /*if(res.err) {
-              message.error('Login failure !');
-              return;
-            }
-            message.success('Login Success !')*/
         })
     };
 
-    const onFinishFailed = (errorInfo: any) => {
-        console.log('Failed:', errorInfo);
-    };
     return (
         <div className='login-box'>
             <div className='container'>
@@ -69,7 +47,6 @@ export default function Login() {
                             <Form
                                 name="basic"
                                 onFinish={onFinish}
-                                onFinishFailed={onFinishFailed}
                                 initialValues={{
                                     username: 'admin',
                                     password: '123456'

@@ -1,18 +1,12 @@
-interface ISetLocal {
-    avatar: string,
-    "cms-token": string,
-    editable: string,
-    player: string,
-    username: string
+import { TOKEN_KEY } from "../constants";
 
+
+//鉴权认证成功处理程序
+export function authSuccessHandler(token: string) {
+    window.localStorage.setItem(TOKEN_KEY, token);
 }
 
-//导入本地内存
-export default function SetLocal(params: ISetLocal) {
-    const itemArr = Object.keys(params);
-    const itemVal = Object.values(params);
-    const length = Object.keys(params)?.length;
-    for (let i = 0; i < length; i++) {
-        localStorage.setItem(itemArr[i], itemVal[i]);
-    }
+//获取token
+export function getToken() {
+    return window.localStorage.getItem(TOKEN_KEY);
 }
