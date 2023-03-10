@@ -4,12 +4,12 @@ import { fetchStudent } from "../../request/api";
 
 export default function Announcement() {
     const [dataSource, setDataSource] = useState(null);
-    useEffect(() => {
-        fetchStudent().then(res => {
-            const data = res.data;
-            setDataSource(data);
-        })
-    }, []);
+    // useEffect(() => {
+    //     fetchStudent().then(res => {
+    //         const data = res.data;
+    //         setDataSource(data);
+    //     })
+    // }, []);
 
     const columns = [
         {

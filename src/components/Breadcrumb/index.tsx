@@ -1,13 +1,13 @@
 import React from "react";
-import { Breadcrumb } from "antd";
+import { Breadcrumb, Button } from "antd";
 import { Link, useLocation } from "react-router-dom";
 import './style.less'
 export default function MyBreadcrumb() {
     const breadcrumbNameMap: Record<string, string> = {
-        '/home/dashboard': 'Dashboard',
-        '/home/person': 'Person',
-        '/home/seat': 'Seat',
-        '/home/announcement': 'Announcement'
+        '/dashboard': '仪表盘',
+        '/person': '学生',
+        '/seat': '座位',
+        '/announcement': '公告'
     };
     const location = useLocation();
     const pathSnippets = location.pathname.split('/').filter((i) => i);
@@ -22,7 +22,7 @@ export default function MyBreadcrumb() {
     return (
         <>
             <div className="breadcrumb-box">
-                <Breadcrumb>{breadcrumbItems.splice(1, breadcrumbItems.length)}</Breadcrumb>
+                <Breadcrumb>{breadcrumbItems}</Breadcrumb>
             </div>
         </>
     )
