@@ -1,42 +1,70 @@
-import React from "react";
-import Table from '../../components/Table'
-import { fetchStudent } from "../../request/api";
+import React, { useEffect, useState } from "react";
+import { Button, Input, Table } from 'antd';
+import { SearchOutlined } from "@ant-design/icons";
 import './style.less'
+import { fetchStudent } from "../../request/api";
 
-const gridManagerName = "student-table";
 
 export default function Students() {
-    const option = {
-        gridManagerName,
-        ajaxData: () => fetchStudent(),
-        columnData: [
-            {
-                key: "student_id",
-                text: "学生ID",
-                width: 200
-            },
-            {
-                key: "student_name",
-                text: "学生名称",
-                width: 200
-            },
-            {
-                key: "create_time",
-                text: "创建时间"
-            },
-            {
-                key: 'student_phone',
-                text: '学生电话'
-            },
-            {
-                key: 'student_class',
-                text: '学生班级'
-            }
-        ]
+    const [data, setData] = useState([]);
+    const [searchVal, setSearchVal] = useState('');
+    useEffect(() => {
+        fetchStudent({ student_name: "" }).then(res => {
+            const data = res.data;
+            setData(data);
+        })
+    }, [])
+    const columns = [
+        {
+            title: '学生名称',
+            dataIndex: 'student_name',
+            key: 'student_id',
+        },
+        {
+            title: '学号',
+            dataIndex: 'student_id',
+            key: 'student_id',
+        },
+        {
+            title: '创建时间',
+            dataIndex: 'create_time',
+            key: 'student_id',
+        },
+        {
+            title: "学生电话",
+            dataIndex: "student_phone",
+            key: 'student_id'
+        }
+    ];
+    const onSearch = () => {
+        const params = {
+            student_name: searchVal
+        }
+        fetchStudent(params).then(res =>{
+            const data = res.data;
+            setData(data);
+        })
     }
     return (
-        <div className="home-table">
-            <Table option={option}/>
-        </div>
-    )
+        <section>
+            <div className="search-area">
+                <Input
+                    placeholder='学生名称'
+                    style={{ width: 230 }}
+                    onChange={(e) => setSearchVal(e.target.value.trim())}
+                    onPressEnter={(e) => onSearch()}
+                />
+                <Button
+                    type='primary'
+                    icon={<SearchOutlined/>}
+                    style={{ width: 46 }}
+                    // loading={searchLoading}
+                    onClick={() => onSearch()}
+                />
+            </div>
+            <div className="table-area">
+                <Table dataSource={data} columns={columns}/>
+            </div>
+        </section>
+    );
 }
