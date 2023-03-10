@@ -14,14 +14,6 @@ export default function BaseRouter() {
     return (
         <Router>
             <Routes>
-                {/*<Route path='/' element={<Login/>}></Route>*/}
-                {/*<Route path='/home' element={<App/>}>*/}
-                {/*    <Route path='/home/dashboard' element={<Dashboard/>}></Route>*/}
-                {/*    <Route path='/home/person' element={<Students/>}></Route>*/}
-                {/*    <Route path='/home/seat' element={<Stream/>}></Route>*/}
-                {/*    <Route path='/home/announcement' element={<Announcement/>}></Route>*/}
-                {/*</Route>*/}
-                {/*<Route path='/register' element={<Register/>}></Route>*/}
                 <Route path="/" element={<App/>}>
                     <Route path="/" element={<Navigate to="/login"/>}></Route>
                     <Route path='/dashboard' element={<Dashboard/>}></Route>
