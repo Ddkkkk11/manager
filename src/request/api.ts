@@ -5,8 +5,13 @@ interface IFetchLogin {
     password: string
 }
 
+interface IFetchRegister {
+    username: string
+    password: string
+}
+
 //注册
-export const fetchRegister = (params: IFetchLogin): Promise<any> => {
+export const fetchRegister = (params: IFetchRegister): Promise<any> => {
     return basicService.post('register', params);
 }
 //登录
