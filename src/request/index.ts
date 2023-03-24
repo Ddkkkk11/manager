@@ -19,14 +19,14 @@ basicService.interceptors.request.use(config => {
     }
     return config;
 }, err => {
-    return Promise.reject(err);
+    return Promise.reject(err.response.data);
 });
 
 //响应拦截器
 basicService.interceptors.response.use(res => {
     return res.data;
 }, err => {
-    return Promise.reject(err);
+    return Promise.reject(err.response.data);
 });
 
 export default basicService;
