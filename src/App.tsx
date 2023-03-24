@@ -1,10 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import AdminMenu from "./components/menu";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import MyBreadcrumb from "./components/Breadcrumb";
 import User from './components/user';
+import { getToken } from "./utils";
+import { message } from "antd";
 import './style.less'
+function useErrorMessage(messageText: string, duration: number) {
+    const [messageId, setMessageId] = useState(null);
+
+    useEffect(() => {
+        const id = message.error({ content: messageText, duration });
+        // @ts-ignore
+        setMessageId(id);
+        // @ts-ignore
+        return () => clearTimeout(id);
+    }, [messageText, duration]);
+    return messageId;
+}
 export default function App() {
+    const navigate = useNavigate();
+    const token = getToken();
+    useErrorMessage('请先登录', 3);
+    useEffect(() => {
+        if (!token) {
+            navigate("/login");
+        }
+    }, []);
+
     return (
         <>
             <div className='layout'>

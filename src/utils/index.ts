@@ -10,3 +10,7 @@ export function authSuccessHandler(token: string) {
 export function getToken() {
     return window.localStorage.getItem(TOKEN_KEY);
 }
+//移除token
+export function removeToken() {
+    return window.localStorage.removeItem(TOKEN_KEY);
+}
