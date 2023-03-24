@@ -26,6 +26,11 @@ export default function Students() {
             key: 'student_id',
         },
         {
+            title: "班级",
+            dataIndex: "student_class",
+            key: "student_class"
+        },
+        {
             title: '创建时间',
             dataIndex: 'create_time',
             key: 'student_id',
