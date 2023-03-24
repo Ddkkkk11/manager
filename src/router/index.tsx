@@ -6,8 +6,7 @@ import Login from "../pages/Login";
 import Dashboard from "../containers/dashboard";
 import Stream from "../containers/stream";
 import Announcement from "../pages/Announcement";
-// APP > List
-//Login
+import Register from "../pages/Register";
 
 
 export default function BaseRouter() {
@@ -22,6 +21,7 @@ export default function BaseRouter() {
                     <Route path='/announcement' element={<Announcement/>}></Route>
                 </Route>
                 <Route path="/login" element={<Login/>}></Route>
+                <Route path="/register" element={<Register/>}></Route>
             </Routes>
         </Router>
     )

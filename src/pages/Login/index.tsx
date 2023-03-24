@@ -85,6 +85,11 @@ export default function Login() {
                                             style={{ marginTop: 10, background: '#2348AF', borderColor: '#2348AF' }}>
                                         Login
                                     </Button>
+                                    <Button size='large' type="primary" block
+                                            onClick={() => navigate("/register")}
+                                            style={{ marginTop: 10, background: '#2348AF', borderColor: '#2348AF' }}>
+                                        Register
+                                    </Button>
                                 </Form.Item>
                             </Form>
                         </div>
