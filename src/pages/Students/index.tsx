@@ -63,7 +63,6 @@ export default function Students() {
                     type='primary'
                     icon={<SearchOutlined/>}
                     style={{ width: 46 }}
-                    // loading={searchLoading}
                     onClick={() => onSearch()}
                 />
             </div>
