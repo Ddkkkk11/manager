@@ -20,6 +20,11 @@ export default function Login() {
                 authSuccessHandler(res.data.access_token);
                 navigate("/dashboard");
             }
+        }).catch(err => {
+            if (err.message) {
+                message.error(err.message);
+                return null;
+            }
         })
     };
 
