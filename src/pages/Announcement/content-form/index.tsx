@@ -57,7 +57,7 @@ export default function ContentForm(props: IProps) {
         form.submit();
     }
     return (
-        <Modal visible title={rowData.id? "编辑公告": "添加公告" } onCancel={() => closeModal(false)} onOk={() =>onOk()}>
+        <Modal visible title={rowData.id? "编辑公告": "添加公告" } width={"50%"} onCancel={() => closeModal(false)} onOk={() =>onOk()}>
             <Form
                 form={form}
                 onFinish={onFinish}
