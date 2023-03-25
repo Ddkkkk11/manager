@@ -67,7 +67,7 @@ export default function Students() {
                 />
             </div>
             <div className="table-area">
-                <Table dataSource={data} columns={columns}/>
+                <Table dataSource={data} columns={columns} scroll={{  y: "calc(100vh - 300px)" }}/>
             </div>
         </section>
     );
