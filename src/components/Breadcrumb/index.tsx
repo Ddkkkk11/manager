@@ -7,7 +7,8 @@ export default function MyBreadcrumb() {
         '/dashboard': '仪表盘',
         '/person': '学生',
         '/seat': '座位',
-        '/announcement': '公告'
+        '/announcement': '公告',
+        '/comment': '评论',
     };
     const location = useLocation();
     const pathSnippets = location.pathname.split('/').filter((i) => i);
