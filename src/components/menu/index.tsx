@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Menu } from 'antd';
 import { fetchMenu } from "../../request/api";
-import { CrownOutlined, ExperimentOutlined, GlobalOutlined, HomeOutlined } from '@ant-design/icons';
+import { CrownOutlined, ExperimentOutlined, GlobalOutlined, HomeOutlined, CommentOutlined } from '@ant-design/icons';
 import { MenuI } from "../../../typing/type";
 
 const ROUTE_ICON_MAP: any = {
@@ -9,6 +9,7 @@ const ROUTE_ICON_MAP: any = {
     'ExperimentOutlined': <ExperimentOutlined/>,
     'GlobalOutlined': <GlobalOutlined/>,
     'CrownOutlined': <CrownOutlined/>,
+    'CommentOutlined': <CommentOutlined />,
 }
 const getIcon = (icon: string) => {
     const IconEl = ROUTE_ICON_MAP[icon];
