@@ -45,7 +45,7 @@ export default function App() {
                         <Outlet/>
                     </div>
                 </div>
-                <footer>
+                <footer style={{ position: "fixed", bottom: 0 }}>
                     <a href="https://beian.miit.gov.cn/" style={{ color: "#333" }}>&copy;2023 By 小薛
                         备案信息：陕ICP备2022014014号</a>
                 </footer>
