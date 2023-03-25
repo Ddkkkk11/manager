@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Button, Table, Modal, message, Input } from 'antd';
-import { deleteAnnouncement, fetchAnnouncement, fetchStudent, searchAnnouncement } from "../../request/api";
+import { Button, Table, Modal, message, Input, Pagination } from 'antd';
+import { SearchOutlined } from "@ant-design/icons";
+import { deleteAnnouncement, fetchAnnouncement, searchAnnouncement } from "../../request/api";
 import ContentForm from "./content-form";
 import dayjs from 'dayjs';
 import 'dayjs/locale/zh-cn';
 import "./style.less"
-import { SearchOutlined } from "@ant-design/icons";
 
 export default function Announcement() {
     const [data, setData] = useState<{ id: number, content: string, time: string }[]>([]);
@@ -73,6 +73,7 @@ export default function Announcement() {
             title: "Id",
             dataIndex: "id",
             key: "id",
+            width: 100
         },
         {
             title: "创建时间",
@@ -89,16 +90,16 @@ export default function Announcement() {
             title: "操作",
             dataIndex: "action",
             key: "action",
+            width: 200,
             render: (text: string, record: any) => (
                 <>
                     <Button type="primary"  danger onClick={() => handleDelete(record)}>删除</Button>
-                    <Button type="primary"  style={{ marginTop: 10 }} onClick={() => editContent(record)}>编辑</Button>
+                    <Button type="primary"  style={{ marginLeft: 10 }} onClick={() => editContent(record)}>编辑</Button>
                 </>
             )
         }
     ];
     //控制弹窗开启和关闭
-
     const handleModal = (isShow: boolean) => {
         setFormState(isShow);
         setRow({});
@@ -129,10 +130,11 @@ export default function Announcement() {
                         formState ? <ContentForm closeModal={handleModal} setData={setData} rowData={rowData}/> : null
                     }
                 </div>
-                <Table
-                    dataSource={data}
-                    columns={columns}
-                />
+                    <Table
+                        dataSource={data}
+                        columns={columns}
+                        scroll={{  y: "calc(100vh - 300px)"}}
+                    />
             </section>
         </>
     );
