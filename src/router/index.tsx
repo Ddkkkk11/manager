@@ -7,6 +7,7 @@ import Dashboard from "../containers/dashboard";
 import Stream from "../containers/stream";
 import Announcement from "../pages/Announcement";
 import Register from "../pages/Register";
+import Comment from "../pages/Comment";
 
 
 export default function BaseRouter() {
@@ -19,6 +20,7 @@ export default function BaseRouter() {
                     <Route path='/person' element={<Students/>}></Route>
                     <Route path='/seat' element={<Stream/>}></Route>
                     <Route path='/announcement' element={<Announcement/>}></Route>
+                    <Route path='/comment' element={<Comment/>}></Route>
                 </Route>
                 <Route path="/login" element={<Login/>}></Route>
                 <Route path="/register" element={<Register/>}></Route>
