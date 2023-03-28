@@ -8,6 +8,7 @@ import Stream from "../containers/stream";
 import Announcement from "../pages/Announcement";
 import Register from "../pages/Register";
 import Comment from "../pages/Comment";
+import Reply from "../pages/Reply";
 
 
 export default function BaseRouter() {
@@ -21,6 +22,7 @@ export default function BaseRouter() {
                     <Route path='/seat' element={<Stream/>}></Route>
                     <Route path='/announcement' element={<Announcement/>}></Route>
                     <Route path='/comment' element={<Comment/>}></Route>
+                    <Route path='/reply' element={<Reply/>}></Route>
                 </Route>
                 <Route path="/login" element={<Login/>}></Route>
                 <Route path="/register" element={<Register/>}></Route>
