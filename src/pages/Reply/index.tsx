@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { deleteComment, deleteReply, fetchComment, fetchReply, searchComment } from "../../request/api";
+import {  deleteReply, fetchReply } from "../../request/api";
 import { Button, Input, message, Modal, Table } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
 import dayjs from "dayjs";
-
+import './style.less'
 export default function Reply() {
     const [data, setData] = useState<{ id: number, content: string, time: string }[]>([]);
     const [searchVal, setSearchVal] = useState('');
@@ -110,8 +110,8 @@ export default function Reply() {
     ];
     return (
         <>
-            <section className="comment-area">
-                <div className="comment-input-area">
+            <section className="reply-area">
+                <div className="reply-input-area">
                     <Input
                         placeholder='评论Id'
                         style={{ width: 230 }}
