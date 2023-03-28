@@ -54,3 +54,29 @@ export const editAnnouncement = (id: number, params: IFetchAnnouncement) => {
 export const searchAnnouncement = (params: IFetchAnnouncement): Promise<any> => {
     return basicService.get(`/announcement`, { params });
 }
+
+//获取评论
+export const fetchComment = (): Promise<any> => {
+    return basicService.get("/comment");
+}
+//搜索评论
+interface IFetchComment {
+    content: string
+}
+export const searchComment = (params: IFetchComment): Promise<any> => {
+    return basicService.get("/comment", { params })
+}
+
+//删除评论
+export const deleteComment = (id: number): Promise<any> => {
+    return basicService.delete(`/comment/${id}`);
+}
+
+//获取回复
+export const fetchReply = (params: { parentCommentId?: number | string | undefined }): Promise<any> => {
+    return basicService.get("/reply", { params });
+}
+//删除回复
+export const deleteReply = (id: number): Promise<any> => {
+    return basicService.delete(`/reply/${id}`);
+}
