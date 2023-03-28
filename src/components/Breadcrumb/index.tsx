@@ -9,6 +9,7 @@ export default function MyBreadcrumb() {
         '/seat': '座位',
         '/announcement': '公告',
         '/comment': '评论',
+        '/reply': '回复',
     };
     const location = useLocation();
     const pathSnippets = location.pathname.split('/').filter((i) => i);
