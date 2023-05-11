@@ -2,69 +2,102 @@ import React, { useEffect, useState } from "react";
 import { Button, Input, Table } from 'antd';
 import { SearchOutlined } from "@ant-design/icons";
 import './style.less'
-import { fetchStudent } from "../../request/api";
+import { fetchOneStudent, fetchStudent } from "../../request/api";
+import AddStudentModal from "./AddStudentModal";
 
 
 export default function Students() {
     const [data, setData] = useState([]);
     const [searchVal, setSearchVal] = useState('');
+    const [modalState, setModalState] = useState(false);
+    const [rowData, setRowData] = useState(null);
     useEffect(() => {
         fetchStudent({ student_name: "" }).then(res => {
             const data = res.data;
             setData(data);
         })
     }, [])
+    const editRow = (isShow: boolean, rowData: any) => {
+        setModalState(isShow);
+        setRowData(rowData)
+    }
     const columns = [
         {
-            title: '学生名称',
-            dataIndex: 'student_name',
-            key: 'student_id',
+            title: '学生Id',
+            dataIndex: 'userId',
+            key: 'userId',
         },
         {
-            title: '学号',
-            dataIndex: 'student_id',
-            key: 'student_id',
+            title: '学生用户名',
+            dataIndex: 'username',
+            key: 'username',
         },
         {
-            title: "班级",
-            dataIndex: "student_class",
-            key: "student_class"
+            title: "学生班级",
+            dataIndex: "className",
+            key: "className"
         },
         {
-            title: '创建时间',
-            dataIndex: 'create_time',
-            key: 'student_id',
+            title: '学生年级',
+            dataIndex: 'grade',
+            key: 'grade',
         },
         {
-            title: "学生电话",
-            dataIndex: "student_phone",
-            key: 'student_id'
+            title: "Icon",
+            dataIndex: "icon",
+            key: 'icon',
+            render: (url: string) => {
+                return <img src={url} alt="" style={{ width: 128, height: 128 }}/>
+        }
+        },
+        {
+            title: "操作",
+            dataIndex: "action",
+            key: "action",
+            width: 200,
+            render: (text: string, record: any) => (
+                <>
+                    <Button type="primary"  danger onClick={() => console.log('删除')}>删除</Button>
+                    <Button type="primary"  style={{ marginLeft: 10 }} onClick={() => editRow(true, record)}>编辑</Button>
+                </>
+            )
         }
     ];
     const onSearch = () => {
         const params = {
-            student_name: searchVal
+            username: searchVal
         }
-        fetchStudent(params).then(res =>{
+        fetchOneStudent(params).then(res =>{
             const data = res.data;
             setData(data);
         })
     }
+    const onSetStudentModal = (isShow: boolean) => {
+        setModalState(isShow);
+        setRowData(null);
+    }
     return (
         <section>
             <div className="search-area">
-                <Input
-                    placeholder='学生名称'
-                    style={{ width: 230 }}
-                    onChange={(e) => setSearchVal(e.target.value.trim())}
-                    onPressEnter={(e) => onSearch()}
-                />
-                <Button
-                    type='primary'
-                    icon={<SearchOutlined/>}
-                    style={{ width: 46 }}
-                    onClick={() => onSearch()}
-                />
+                <div>
+                    <Input
+                        placeholder='学生名称'
+                        style={{ width: 230 }}
+                        onChange={(e) => setSearchVal(e.target.value.trim())}
+                        onPressEnter={(e) => onSearch()}
+                    />
+                    <Button
+                        type='primary'
+                        icon={<SearchOutlined/>}
+                        style={{ width: 46 }}
+                        onClick={() => onSearch()}
+                    />
+                </div>
+                <Button type="primary" onClick={() => onSetStudentModal(true)} style={{ position: "absolute", left: 200 }}>添加学生</Button>
+                {
+                    modalState? <AddStudentModal onSetStudentModal={onSetStudentModal} rowData={rowData} setData={setData}/> : null
+                }
+
             </div>
             <div className="table-area">
                 <Table dataSource={data} columns={columns} scroll={{  y: "calc(100vh - 300px)" }}/>

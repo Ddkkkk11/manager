@@ -21,10 +21,8 @@ export default function Register() {
             }
 
         }).catch(err => {
-            if (err.message) {
-                message.error(err.message);
-                return null;
-            }
+            message.error('该用户已经注册');
+            return null;
         })
     };
 

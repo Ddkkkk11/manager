@@ -14,6 +14,7 @@ interface IFetchRegister {
 export const fetchRegister = (params: IFetchRegister): Promise<any> => {
     return basicService.post('register', params);
 }
+
 //登录
 export const fetchLogin = (params: IFetchLogin): Promise<any> => {
     return basicService.post('login', params);
@@ -26,7 +27,14 @@ interface IFetchStudent {
     student_name: string
 }
 export const fetchStudent = (params: IFetchStudent): Promise<any> => {
-    return basicService.get(`/student?student_name=${params.student_name}`);
+    return basicService.post(`/register/student`);
+}
+export const fetchOneStudent = (params: { username: string }) => {
+    return basicService.post(`/register/student?username=${params.username}`)
+}
+//编辑学生
+export const editStudent = (id: number, params: any) => {
+    return basicService.patch(`/register/${id}`, params);
 }
 //获取管理员公告
 export const fetchAnnouncement = (): Promise<any> => {
