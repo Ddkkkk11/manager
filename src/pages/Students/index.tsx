@@ -4,7 +4,6 @@ import { SearchOutlined } from "@ant-design/icons";
 import './style.less'
 import { deleteStudent, fetchOneStudent, fetchStudent } from "../../request/api";
 import AddStudentModal from "./AddStudentModal";
-import dayjs from 'dayjs';
 
 
 export default function Students() {
