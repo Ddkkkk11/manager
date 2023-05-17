@@ -19,9 +19,17 @@ export const fetchRegister = (params: IFetchRegister): Promise<any> => {
 export const fetchLogin = (params: IFetchLogin): Promise<any> => {
     return basicService.post('login', params);
 }
+//获取菜单
 export const fetchMenu = (): Promise<any> => {
     return basicService.get('/menu')
 }
+
+//获取仪表盘数据
+export const fetDashboard = () => {
+    return basicService.post('reservation/get_reservation');
+}
+
+
 //获取学生数据
 interface IFetchStudent {
     student_name: string
@@ -35,6 +43,10 @@ export const fetchOneStudent = (params: { username: string }) => {
 //编辑学生
 export const editStudent = (id: number, params: any) => {
     return basicService.patch(`/register/${id}`, params);
+}
+//删除学生
+export const deleteStudent = (id: number) => {
+    return basicService.delete(`register/${id}`);
 }
 //获取管理员公告
 export const fetchAnnouncement = (): Promise<any> => {
