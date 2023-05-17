@@ -100,3 +100,22 @@ export const fetchReply = (params: { parentCommentId?: number | string | undefin
 export const deleteReply = (id: number): Promise<any> => {
     return basicService.delete(`/reply/${id}`);
 }
+
+//获取自习室
+export const getRoom = (): Promise<any> => {
+    return basicService.get('room');
+}
+//通过描述查找自习室
+export const getOneRoom = (description: string) => {
+    return basicService.get(`room/${description}`);
+}
+
+//获取座位
+export const getSeat = (roomId: string | undefined): Promise<any> => {
+    return basicService.get(`seat/room/${roomId}`)
+}
+//通过座位编号查找座位
+export const getSeatByNumber = (num:  string) => {
+    console.log(typeof num, '123123123')
+    return basicService.get(`seat/number/${num}`)
+}
