@@ -6,7 +6,8 @@ export default function MyBreadcrumb() {
     const breadcrumbNameMap: Record<string, string> = {
         '/dashboard': '仪表盘',
         '/person': '学生',
-        '/seat': '座位',
+        '/room': '自习室',
+        '/room/seat': '座位',
         '/announcement': '公告',
         '/comment': '评论',
         '/reply': '回复',
