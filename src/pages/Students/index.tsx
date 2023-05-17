@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Button, Input, Table } from 'antd';
+import { Button, Input, message, Modal, Table } from 'antd';
 import { SearchOutlined } from "@ant-design/icons";
 import './style.less'
-import { fetchOneStudent, fetchStudent } from "../../request/api";
+import { deleteStudent, fetchOneStudent, fetchStudent } from "../../request/api";
 import AddStudentModal from "./AddStudentModal";
+import dayjs from 'dayjs';
 
 
 export default function Students() {
@@ -12,14 +13,40 @@ export default function Students() {
     const [modalState, setModalState] = useState(false);
     const [rowData, setRowData] = useState(null);
     useEffect(() => {
-        fetchStudent({ student_name: "" }).then(res => {
+        fetchStudent({ student_name: '' }).then(res => {
             const data = res.data;
             setData(data);
         })
-    }, [])
+    }, []);
     const editRow = (isShow: boolean, rowData: any) => {
         setModalState(isShow);
         setRowData(rowData)
+    }
+    const onDeleteStudent = (record: any) => {
+        const id = record.userId;
+        Modal.confirm({
+            title: `删除确认`,
+            content: (
+                <>
+                    <span>确定删除用户</span>
+                    <span style={{ color: "red" }}>{record.username}</span>
+                    吗？
+                </>
+            ),
+            onOk: () => {
+                deleteStudent(id).then(res => {
+                    message.success('删除成功');
+                    fetchStudent({ student_name: "" }).then(res => {
+                        const data = res.data;
+                        setData(data);
+                    })
+                }).catch(err => {
+                    message.error('删除失败');
+                })
+            }
+
+        });
+
     }
     const columns = [
         {
@@ -57,7 +84,7 @@ export default function Students() {
             width: 200,
             render: (text: string, record: any) => (
                 <>
-                    <Button type="primary"  danger onClick={() => console.log('删除')}>删除</Button>
+                    <Button type="primary"  danger onClick={() => onDeleteStudent(record)}>删除</Button>
                     <Button type="primary"  style={{ marginLeft: 10 }} onClick={() => editRow(true, record)}>编辑</Button>
                 </>
             )

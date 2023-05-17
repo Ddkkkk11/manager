@@ -44,7 +44,7 @@ export default function AddStudentModal(props: any) {
     }
     return (
         <Modal
-            title='Add Student'
+            title='添加学生'
             visible
             onCancel={() => onSetStudentModal(false)}
             onOk={() => form.submit()}
