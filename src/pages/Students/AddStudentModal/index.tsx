@@ -4,7 +4,6 @@ import { editStudent, fetchOneStudent, fetchRegister, fetchStudent } from "../..
 
 export default function AddStudentModal(props: any) {
     const { onSetStudentModal, rowData, setData } = props;
-    console.log(rowData, '数据')
     const [form] = Form.useForm();
     const onFinish = (values: any) => {
         const parmas = values;
