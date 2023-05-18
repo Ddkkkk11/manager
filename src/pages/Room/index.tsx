@@ -3,10 +3,13 @@ import { Button, Input, Table } from 'antd';
 import { getOneRoom, getRoom } from '../../request/api';
 import { Link } from 'react-router-dom';
 import { SearchOutlined } from '@ant-design/icons';
+import RoomAddModal from './room-add-modal';
 import './style.less'
+
 export default function Room() {
     const [data, setData] = useState([]);
     const [searchVal, setSearchVal] = useState('');
+    const [isShowModal, setIsShowModal] = useState(false);
     useEffect(() => {
         getRoom().then(res => {
             const data = res.data;
@@ -52,8 +55,16 @@ export default function Room() {
     }
 
     return (
-        <section>
-            <div className='search-area'>
+        <section className='room-area'>
+            {
+                isShowModal ? <RoomAddModal setModalState={setIsShowModal} setData={setData}/> : null
+            }
+            <div className='room-search-area'>
+                <Button
+                    type='primary'
+                    onClick={() => setIsShowModal(true)}
+                >添加自习室
+                </Button>
                 <div>
                     <Input
                         placeholder='自习室描述'
