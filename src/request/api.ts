@@ -105,6 +105,11 @@ export const deleteReply = (id: number): Promise<any> => {
 export const getRoom = (): Promise<any> => {
     return basicService.get('room');
 }
+//添加自习室
+export const addRoom = (params: any): Promise<any> => {
+    return basicService.post('room', params);
+}
+
 //通过描述查找自习室
 export const getOneRoom = (description: string) => {
     return basicService.get(`room/${description}`);
@@ -116,6 +121,15 @@ export const getSeat = (roomId: string | undefined): Promise<any> => {
 }
 //通过座位编号查找座位
 export const getSeatByNumber = (num:  string) => {
-    console.log(typeof num, '123123123')
     return basicService.get(`seat/number/${num}`)
+}
+
+//添加座位
+export const addSeat = (params: any): Promise<any> => {
+    return basicService.post('seat', params);
+}
+
+//释放座位;
+export const deleteSeat = (id: number) => {
+    return basicService.delete(`seat/${id}`);
 }
