@@ -19,7 +19,6 @@ export default function Reply() {
         });
     }, []);
     const handleDelete = (record: any) => {
-        console.log("record", record);
         Modal.confirm({
             title: `删除确认`,
             content: (
@@ -30,7 +29,6 @@ export default function Reply() {
                 </>
             ),
             onOk: () => {
-                console.log("recordId", typeof record.id);
                 deleteReply(record.id).then(res => {
                     if (res.data.affected) {
                         message.success("删除成功");
